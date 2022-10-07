@@ -5,13 +5,7 @@ import { Brand } from './entities/brand.entity';
 
 @Injectable()
 export class BrandsService {
-    private brands: Brand[] = [
-        {
-            id: uuid(),
-            name: 'Kia',
-            createdAt: new Date().getTime(),
-        },
-    ];
+    private brands: Brand[] = [];
 
     findAll() {
         return this.brands;
@@ -47,5 +41,9 @@ export class BrandsService {
     remove(id: string) {
         this.findOne(id);
         this.brands = this.brands.filter((b) => b.id !== id);
+    }
+
+    fillBrandsWithSeedData(brands: Brand[]) {
+        this.brands = brands;
     }
 }

@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { Brand } from '../../brands/entities/brand.entity';
+import { Brand } from '@brands/entities/brand.entity';
 
 export const BRANDS_SEED: Brand[] = [
     {

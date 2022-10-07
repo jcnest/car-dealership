@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CarsService } from '../cars/cars.service';
-import { BrandsService } from '../brands/brands.service';
+import { CarsService } from '@cars/cars.service';
+import { BrandsService } from '@brands/brands.service';
 import { CARS_SEED, BRANDS_SEED } from './data';
 
 @Injectable()
